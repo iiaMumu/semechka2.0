@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class psyhologist extends JFrame implements ActionListener {
-    final String TITLE = "Chatter : Psyhologist bot";
+    final String TITLE = " Семён - Psyhologist bot";
     final int START = 200;
     final int WINDOW = 350;
     final int WHEIGHT = 450;
