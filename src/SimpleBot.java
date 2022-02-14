@@ -22,7 +22,7 @@ import java.util.regex.Pattern;;
                 "Давайте сохарним интригу?"};
         final Map<String, String> PATTERNS_FOR_ANALYSIS = new HashMap<String,String>() {
             {
-                //hello , hi
+              //hello , hi
                 put("хай", "hello");
                 put("привет", "hello");
                 put("здорово", "hello");
@@ -35,6 +35,9 @@ import java.util.regex.Pattern;;
                 put("как\\s.*имя", "name");
                 put("есть\\s.*имя", "name");
                 put("какое\\s.*имя", "name");
+                //wannaTalk
+                put("новости","news");
+                put("поговорить","news");
                 //howareyou
                 put("как\\s.*дела", "howareyou");
                 put("как\\s.*;жизнь", "howareyou");
@@ -44,15 +47,36 @@ import java.util.regex.Pattern;;
                 put("что\\s.*делаешь", "whatdoyoudoing");
                 put("чем\\s.*занимаешься", "whatdoyoudoing");
                 //whatdoyoulike
-                put("что\\s.*нравтся", "whatdoyoulike");
+                put("что\\s.*нравится", "whatdoyoulike");
                 put("что\\s.*любишь", "whatdoyoulike");
                 //iamfeeling
                 put("кажется", "iamfeeling");
                 put("чувствую", "iamfeeling");
                 put("испытываю", "iamfeeling");
                 //yes
-                put("^да", "yes");
+                put("да", "yes");
                 put("согласен", "yes");
+                //iCant
+                put("не могу","cant");
+                put("не смогу","cant");
+                put("не уверен","cant");
+                put("не уверена","cant");
+                put("не получается","cant");
+                //otvetOK
+                put("нормально","iamOk");
+                put("хорошо","iamOk");
+                put("замечательно","iamOk");
+                put("норм","iamOk");
+                //otvetBad
+                put("плохо","bad");
+                put("ужасно","bad");
+                put("не очень","bad");
+                //nervous
+                put("нервничаю","nervous");
+                //thanks
+                put("спасибо","thanks");
+                put("помог"," thanks");
+                put("благодарю","thanks");
                 //whattime
                 put("который\\s.*час", "whattime");
                 put("сколько\\s.*времени", "whattime");
@@ -74,14 +98,30 @@ import java.util.regex.Pattern;;
         };
         final Map<String,String> ANSWERS_BY_PATTERNS = new HashMap<String,String>(){{
             put("hello"," И снова здравствуй с:");
-            put("who", "Я бот психолог)");
+            put("who", "Я бот психолог");
             put("name", "Меня зовут Семечка или же Семен,как тебе удобнее ");
             put("howareyou", "У меня все хорошо,меня больше волнует ,как у тебя дела?");
             put("whatdoyoudoing", "Я помогаю людям,когда они ко мне обращаются");
             put("whatdoyoulike", "Мне нравится думать, что я не просто программа");
             put("iamfeeling", "Как давно это началось? Расскажите чуть подробнее");
-            put("yes", "Согласие есть продукт при полном непр2отивлении сторон.");
+            put("yes", "Именно");
             put("bye", "До встречи! :)");
+            put("iamOK","Рад это слышать!♥");
+            put("bad","Расскажи мне,я попробую помочь ");
+            put("nervous","Расскажи мне :)");
+            put("cant","Даже если ты споткнулся и упал, ты все равно продвинулся вперед, помни об этом!\n" +
+                    "Ты все сможешь и рано опускаешь руки ." +
+                    "Я не могу пережить это вместо тебя, я всего-лишь бот. Но я могу прожить это вместе с тобой. А вместе мы все сможем ♥\n" );
+            put("","");
+            put("","");
+            put("","");
+            put("","");
+            put("","");
+            put("","");
+            put("","");
+            put("","");
+            put("","");
+
         }};
 
         Pattern pattern;
@@ -109,4 +149,3 @@ import java.util.regex.Pattern;;
             return say;
         }
     }
-
